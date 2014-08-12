@@ -104,7 +104,7 @@ Check [ChooseALicense.com](http://choosealicense.com/licenses/mit) for details.
 [depstat-image]: http://img.shields.io/david/bionode/fasta-parser.svg?style=flat
 [gitter-image]: http://img.shields.io/badge/gitter-bionode/fasta--parser-brightgreen.svg?style=flat
 [gitter-url]: https://gitter.im/bionode/fasta-parser
-[doi-url]: http://dx.doi.org/10.5281/zenodo.11269
-[doi-image]: http://img.shields.io/badge/doi-10.5281/zenodo.11269-blue.svg?style=flat
+[doi-url]: http://dx.doi.org/10.5281/zenodo.11270
+[doi-image]: http://img.shields.io/badge/doi-10.5281/zenodo.11270-blue.svg?style=flat
 [browser-url]: https://ci.testling.com/bionode/fasta-parser
 [browser-image]: https://ci.testling.com/bionode/fasta-parser.png

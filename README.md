@@ -8,6 +8,8 @@
 [![Gitter chat][gitter-image]][gitter-url]
 [![DOI][doi-image]][doi-url]
 
+[![Browser][browser-image]][browser-url]
+
 Install
 -------
 
@@ -104,5 +106,5 @@ Check [ChooseALicense.com](http://choosealicense.com/licenses/mit) for details.
 [gitter-url]: https://gitter.im/bionode/fasta-parser
 [doi-url]: http://dx.doi.org/??.????/zenodo.?????
 [doi-image]: http://img.shields.io/badge/doi-??.????/zenodo.?????-blue.svg?style=flat
-
-[![Bitdeli Badge](http://d2weczhvl823v0.cloudfront.net/bionode/fasta-parser/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[browser-url]: https://ci.testling.com/bionode/fasta-parser
+[browser-image]: https://ci.testling.com/bionode/fasta-parser.png

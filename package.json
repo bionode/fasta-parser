@@ -1,0 +1,63 @@
+{
+  "name": "fasta-parser",
+  "description": "Buffer Stream parser from FASTA to JSON",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bionode/fasta-parser",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bionode/fasta-parser.git"
+  },
+  "author": {
+    "name": "Bruno Vieira",
+    "email": "mail@bmpvieira.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "split": "^0.3.0",
+    "through2": "~0.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^5.9.3",
+    "coveralls": "~2.11.1",
+    "docco": "~0.6.3",
+    "istanbul": "~0.3.0",
+    "tap-spec": "~0.2.0",
+    "tape": "~2.14.0",
+    "testling": "^1.7.0",
+    "uglify-js": "~2.4.15"
+  },
+  "keywords": [
+    "bio",
+    "biology",
+    "bioinformatics",
+    "fasta",
+    "parser",
+    "streams",
+    "science"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/fasta-parser.js | tap-spec",
+    "test-browser": "browserify test/*.js | testling | tap-spec",
+    "coverage": "istanbul cover test/fasta-parser.js --report lcovonly -- | tap-spec && rm -rf ./coverage",
+    "coveralls": "istanbul cover test/fasta-parser.js --report lcovonly -- | tap-spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
+    "build-browser": "browserify index.js -r ./index.js:fasta-parser | uglifyjs > fasta-parser.min.js",
+    "build-docs": "docco ./lib/fasta-parser.js"
+  },
+  "testling": {
+    "files": "test/fasta-parser.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}

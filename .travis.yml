@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "0.10"
+after_script:
+  - npm run coveralls
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#bionode"
+    template:
+      - "%{message}: %{repository}#%{build_number}: %{commit_message} (%{branch} - %{commit} : %{author})"

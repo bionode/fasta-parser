@@ -1,7 +1,7 @@
 {
   "name": "fasta-parser",
   "description": "Buffer Stream parser from FASTA to JSON",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/bionode/fasta-parser",
   "repository": {
     "type": "git",

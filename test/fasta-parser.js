@@ -2,7 +2,7 @@ var test = require('tape')
 var fasta = require('../')
 var jsonData = require('./data')
 
-var fastaData = new Buffer ('>contig1\n\
+var fastaData = Buffer.from(`>contig1\n\
 TCACCAACTACGAGATATGAGGTAAGCCAAAAAAGCACGTGGTGGCGCTCACCGACTGTTCCCAAACTGTAACTCATCGTT\n\
 CCGTCAAGGCCTGACTTACTTCCCGGCCCTTTCCATGCGCGGACCATACCGTCCTAGTTCTTCGGTTATGTTTCCGATGTA\n\
 GGAGTGAGCCTACCTCCGTTTGCGTCTTGTTACCAATGAAAAAGCTATGCACTTTGTACAGGGTGCCATCGGGTTTCTGAA\n\
@@ -17,16 +17,15 @@ GAGGGGCGAGCCCTCATCGTCTCTTCTGCGGATGACTTAACACGCTAGGGACGTGGAGTCGATTCCATCGATGGTTATAA
 > contig3 with | "strange" chars > in the header % 123\n\
 TCAAAGATTCGGAATGCTGTCTGGAGGGTGAATCTAACGGTGCGTATCTCGATTGCTCAGTCGCTTTTCGTACTGCGCGAA\n\
 AGTTCGTACCGCTCATTCACTTGGTTCCGAAGCCTGTCCTGATATATGAATCCAAACTAGAGCGGGGCTCTTGACATTTGG\n\
-AGTTGTAAATATCTAATACTCCAATCGG\n')
+AGTTGTAAATATCTAATACTCCAATCGG\n`)
 
-
-test('Should parse a FASTA Buffer to a JSON Buffer', function(t) {
+test('Should parse a FASTA Buffer to a JSON Buffer', function (t) {
   t.plan(1)
   var result = []
   var parser = fasta()
   parser
-  .on('data', function(data) { result.push(JSON.parse(data.toString())) })
-  .on('end', function() { t.deepEqual(result, jsonData) })
+  .on('data', function (data) { result.push(JSON.parse(data.toString())) })
+  .on('end', function () { t.deepEqual(result, jsonData) })
   parser.write(fastaData)
   parser.end()
 })

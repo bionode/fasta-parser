@@ -23,6 +23,7 @@
     "coveralls": "~2.11.1",
     "docco": "~0.6.3",
     "istanbul": "~0.3.0",
+    "standard": "^10.0.1",
     "tap-spec": "~0.2.0",
     "tape": "~2.14.0",
     "testling": "^1.7.0",
@@ -39,7 +40,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "node test/fasta-parser.js | tap-spec",
+    "test": "standard && node test/fasta-parser.js | tap-spec",
     "test-browser": "browserify test/*.js | testling | tap-spec",
     "coverage": "istanbul cover test/fasta-parser.js --report lcovonly -- | tap-spec && rm -rf ./coverage",
     "coveralls": "istanbul cover test/fasta-parser.js --report lcovonly -- | tap-spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",

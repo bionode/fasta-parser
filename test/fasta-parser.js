@@ -36,7 +36,7 @@ test('Should parse a FASTA Buffer to a JSON Buffer', function (t) {
   parser.end()
 })
 
-test('Should include reverse compliment if specified', function (t) {
+test('Should include reverse complement if specified', function (t) {
   t.plan(1)
   var result = []
   var parser = fasta(true)
